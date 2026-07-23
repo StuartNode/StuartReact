@@ -1,13 +1,14 @@
+import { Routes, Route} from "react-router-dom";
+import Pizza from "./pages/pizza.jsx";
+import Home from "./pages/home.jsx";
 
 function App() {
-  
-    return(
-      <body className="h-screen flex items-center justify-center bg-black">
-        <div>
-            <p className="text-white text-4xl font-semibold">hello World</p>
-        </div>
-      </body>
-    );
+    return (
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/pizza" element={<Pizza />} />
+        </Routes>
+    )
 }
 
 export default App
