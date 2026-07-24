@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./index.html",
@@ -25,6 +24,15 @@ module.exports = {
             transform: "translate(-200px,200px)",
           },
         },
+
+        "gridMoves": {
+          "0%": {
+            backgroundPosition: "0px 0px",
+          },
+          "100%": {
+            backgroundPosition: "96px 96px",
+          }
+        }
       },
 
       animation: {
@@ -32,6 +40,7 @@ module.exports = {
         "line-two": "slide-lines-opposite 16s linear infinite",
         "line-three": "slide-lines 14s linear infinite reverse",
         "line-four": "slide-lines-opposite 18s linear infinite reverse",
+        "grid": "gridMoves 40s linear infinite"
       },
     },
   },
