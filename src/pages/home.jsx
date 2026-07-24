@@ -6,15 +6,15 @@ export default function Home() {
         <div className="min-h-screen bg-[#09090B] text-white overflow-hidden">
 
             {/* Background */}
-            <div className="absolute inset-0 z-0 pointer-events-none">
+            <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute inset-0 opacity-[0.14]" style={{backgroundImage: `linear-gradient(#d4d4d8 1px, transparent 1px),linear-gradient(90deg, #d4d4d8 1px, transparent 1px)`, backgroundSize: "48px 48px",}}/>
                 <div className="absolute inset-0" style={{background: "radial-gradient(circle at center, transparent 25%, #09090B 85%)",}}/>
-                <div className="absolute left-1/2 top-1/3 h-[500px] w-[500px]-translate-x-1/2 rounded-full bg-blue-500/20 blur-[160px]"/>
+                <div className="absolute left-1/2 top-1/3 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-500/20 blur-[160px]"/>
             </div>
 
             {/* Navbar */}
-            <nav className="fixed top-0 z-20 w-full border-b border-white/10 bg-black/20 backdrop-blur-xl">
-                <div className="max-auto flex max-w-6xl items-center justify-between px-6 py-5">
+            <nav className="relative z-20 w-full border-b border-white/10 bg-black/20 backdrop-blur-xl">
+                <div className="max-w-6xl mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
                     <div className="text-xl font-bold">
                         <span className="text-blue-400">
                             &lt;/&gt;
@@ -31,7 +31,7 @@ export default function Home() {
             </nav>
 
             {/* Hero */}
-            <section className="flex min-h-screen items-center justify-center px-6">
+            <section className="relative z-10 flex min-h-screen items-center justify-center px-6">
                 <div className="text-center">
 
                     <div className="text-8xl font-black text-blue-400">&lt;/&gt;</div>
