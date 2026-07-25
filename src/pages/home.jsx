@@ -1,7 +1,12 @@
 import { ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import {useEffect} from "react";
 
 export default function Home() {
+    useEffect(() => {
+        document.title = "Home | StuartNode"
+    }, []);
+
     return (
         <div className="fixed inset-0 bg-[#09090B] text-white overflow-hidden">
 
@@ -25,10 +30,10 @@ export default function Home() {
                     </p>
 
                     <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-                        <button className="group flex items-center justify-center gap-2 rounded-xl bg-blue-500 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold transition hover:bg-blue-400">
-                            View Projects
+                        <a href="/project" className="group flex items-center justify-center gap-2 rounded-xl bg-blue-500 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold transition hover:bg-blue-400">
+                            Projects
                             <ArrowRight size={18} className="transition group-hover:translate-x-1"/>
-                        </button>
+                        </a>
 
                         <a href="https://github.com/StuartNode" target="_blank" rel="noopener noreferrer"
                             className="flex items-center justify-center gap-2 rounded-xl bg-white/5 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base transition hover:border-blue-400 sm:border sm:border-transparent">
