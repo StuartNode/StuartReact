@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import Pizza from "./pages/pizza.jsx";
 import Home from "./pages/home.jsx";
 import CountDown from "./pages/countdown.jsx";
+import NotFound from "./pages/notfound.jsx";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/pizza" element={<Pizza />} />
                 <Route path="/countdown" element={<CountDown />} />
+                <Route path="/*" element={<NotFound />} />
             </Routes>
 
             <Analytics />
