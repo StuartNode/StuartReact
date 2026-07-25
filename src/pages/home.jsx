@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
     return (
-        <div className="min-h-screen w-screen bg-[#09090B] text-white overflow-hidden">
+        <div className="min-h-screen bg-[#09090B] text-white overflow-hidden">
 
             {/* Background */}
             <div className="absolute inset-0 pointer-events-none">
@@ -31,7 +31,7 @@ export default function Home() {
             </nav>
 
             {/* Hero */}
-            <section className="relative z-10 flex min-h-screen w-screen items-center justify-center px-6">
+            <section className="relative z-10 flex min-h-screen items-center justify-center px-6">
                 <div className="text-center">
 
                     <div className="text-[clamp(2rem,8vw,5rem)] font-black text-blue-400">&lt;/&gt;</div>
