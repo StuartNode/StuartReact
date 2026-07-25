@@ -11,16 +11,16 @@ export default function NotFound() {
 
             <section className="relative z-10 flex min-h-screen items-center justify-center px-6">
                 <div className="text-center">
-                    <div className="text-8xl font-black text-blue-400">&lt;/&gt;</div>
-                    <h1 className="text-6xl font-black tracking-tight md:text-8xl">404</h1>
+                    <div className="text-[clamp(2rem,8vw,5rem)] font-black text-blue-400">&lt;/&gt;</div>
+                    <h1 className="text-[clamp(2.5rem,10vw,6rem)] font-black tracking-tight">404</h1>
 
-                    <p className="mx-auto mt-6 max-w-2xl text-xl text-zinc-400">
+                    <p className="mx-auto mt-4 sm:mt-6 max-w-2xl text-[clamp(0.875rem,3vw,1.25rem)] text-zinc-400">
                         Oops! This page doesn't exist.
                     </p>
 
-                    <div className="mt-10 flex justify-center gap-4">
+                    <div className="mt-6 sm:mt-10 flex justify-center gap-3 sm:gap-4">
                         <a href="/" target="_blank" rel="noopener noreferrer"
-                           className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3 transition hover:border-blue-400">
+                           className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base transition hover:border-blue-400">
                             Back Home
                         </a>
                     </div>

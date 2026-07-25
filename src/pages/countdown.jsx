@@ -31,8 +31,7 @@ function formatTime(value) {
 function CountDownValue({ value }) {
     return (
         <span
-            className="min-w-[1.9em] text-center text-[clamp(3.5rem,12vh,10rem)] tracking-[0.08em]
-            tabular-nums max-md:text-[clamp(2.4rem,15vw,5rem)] max-md:tracking-[0.04em]">
+            className="min-w-[1.9em] text-center text-[clamp(3.5rem,12vh,10rem)] tracking-[0.08em] tabular-nums max-md:text-[clamp(2.4rem,15vw,5rem)] max-md:tracking-[0.04em]">
             {formatTime(value)}
         </span>
     );
@@ -56,47 +55,27 @@ export default function CountDown() {
     }, []);
 
     return (
-        <div
-            className="relative grid place-items-center w-full min-h-screen overflow-hidden bg-black">
+        <div className="relative w-screen min-h-screen overflow-hidden bg-[#09090B] text-white">
             {/* Background */}
-            <svg
-                className="absolute inset-0 w-full h-full">
-                <defs>
-                    <pattern id="diagonal-stripes" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                        <line x1="0" y1="0" x2="0" y2="20" stroke="rgba(255,255,255,0.05)" strokeWidth="2"/>
-                    </pattern>
-                </defs>
-
-                <rect width="100%" height="100%" fill="black"/>
-                <rect width="100%" height="100%" fill="url(#diagonal-stripes)"/>
-
-                <g className="animate-line-one">
-                    <line x1="0" y1="0" x2="100%" y2="100%" stroke="rgba(255,255,255,0.08)" strokeWidth="2"/>
-                </g>
-
-                <g className="animate-line-two">
-                    <line x1="0" y1="0" x2="100%" y2="100%" stroke="rgba(255,255,255,0.08)" strokeWidth="2"/>
-                </g>
-
-                <g className="animate-line-three">
-                    <line x1="0" y1="0" x2="100%" y2="100%" stroke="rgba(255,255,255,0.08)" strokeWidth="2"/>
-                </g>
-            </svg>
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute inset-0 opacity-[0.14]" style={{backgroundImage: `linear-gradient(#d4d4d8 1px, transparent 1px),linear-gradient(90deg, #d4d4d8 1px, transparent 1px)`, backgroundSize: "48px 48px",}}/>
+                <div className="absolute inset-0" style={{background: "radial-gradient(circle at center, transparent 25%, #09090B 85%)",}}/>
+                <div className="absolute left-1/2 top-1/3 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-500/20 blur-[160px]"/>
+            </div>
 
             {/* Countdown */}
-            <div
-                aria-label="Countdown to freedom"
-                className="relative z-10 flex items-baseline justify-center gap-[clamp(0.5rem,2vw,1.5rem)]
-                text-white font-extrabold leading-[0.85] max-md:gap-[0.35rem] max-[420px]:scale-90">
-                {UNITS.map(([name], index) => (
-                    <span className="contents" key={name}>
-                        <CountDownValue value={timeLeft[name]} />
+            <div aria-label="Countdown to freedom" className="relative z-10 grid place-items-center w-full min-h-screen">
+                <div className="flex items-baseline justify-center gap-[clamp(0.5rem,2vw,1.5rem)] text-white font-extrabold leading-[0.85] max-md:gap-[0.35rem] max-[420px]:scale-90">
+                    {UNITS.map(([name], index) => (
+                        <span className="contents" key={name}>
+                            <CountDownValue value={timeLeft[name]} />
 
-                        {index < UNITS.length - 1 && (
-                            <span aria-hidden="true" className="text-[clamp(3rem,10vh,8rem)] max-md:text-[clamp(2.1rem,12vw,4.2rem)]">:</span>
-                        )}
-                    </span>
-                ))}
+                            {index < UNITS.length - 1 && (
+                                <span aria-hidden="true" className="text-[clamp(3rem,10vh,8rem)] max-md:text-[clamp(2.1rem,12vw,4.2rem)]">:</span>
+                            )}
+                        </span>
+                    ))}
+                </div>
             </div>
         </div>
     );
