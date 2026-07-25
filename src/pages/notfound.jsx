@@ -1,4 +1,5 @@
 import { useEffect} from "react";
+import { Link } from "react-router-dom";
 
 export default function NotFound() {
     useEffect(() => {
@@ -25,10 +26,10 @@ export default function NotFound() {
                     </p>
 
                     <div className="mt-6 sm:mt-10 flex justify-center gap-3 sm:gap-4">
-                        <a href="/" target="_blank" rel="noopener noreferrer"
+                        <Link to="/"
                            className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base transition hover:border-blue-400">
                             Back Home
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>
