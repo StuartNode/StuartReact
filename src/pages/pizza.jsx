@@ -1,4 +1,10 @@
+import { useEffect} from "react";
+
 export default function Pizza() {
+    useEffect(() => {
+        document.title = "Pizza | StuartNode"
+    }, []);
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-black">
             <div>

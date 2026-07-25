@@ -23,9 +23,9 @@ export default function Home() {
                     </div>
 
                     <div className="hidden gap-6 sm:gap-8 text-xs sm:text-sm text-zinc-400 md:flex">
-                        <a href="#projects" className="hover:text-white">Projects</a>
-                        <a href="#about" className="hover:text-white">About</a>
-                        <a href="#contact" className="hover:text-white">Contact</a>
+                        <a href="/projects" className="hover:text-white">Projects</a>
+                        <a href="/about" className="hover:text-white">About</a>
+                        <a href="/contact" className="hover:text-white">Contact</a>
                     </div>
                 </div>
             </nav>

@@ -1,4 +1,10 @@
+import { useEffect} from "react";
+
 export default function NotFound() {
+    useEffect(() => {
+        document.title = "404 | StuartNode"
+    }, []);
+
     return (
         <div className="min-h-screen bg-[#09090B] text-white overflow-hidden">
 

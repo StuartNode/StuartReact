@@ -41,6 +41,7 @@ export default function CountDown() {
     const [timeLeft, setTimeLeft] = useState(getTimeLeft);
 
     useEffect(() => {
+        document.title = "CountDown | StuartNode"
         const interval = setInterval(() => {
             const nextTimeLeft = getTimeLeft();
 
