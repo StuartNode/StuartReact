@@ -12,24 +12,6 @@ export default function Home() {
                 <div className="absolute inset-0 left-1/2 top-1/3 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-500/20 blur-[160px]"/>
             </div>
 
-            {/* Navbar */}
-            <nav className="relative z-20 w-full border-b border-white/10 bg-black/20 backdrop-blur-xl">
-                <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-5 w-full">
-                    <div className="text-lg sm:text-xl font-bold">
-                        <span className="text-blue-400">
-                            &lt;/&gt;
-                        </span>{" "}
-                        StuartNode
-                    </div>
-
-                    <div className="hidden gap-6 sm:gap-8 text-xs sm:text-sm text-zinc-400 md:flex">
-                        <a href="/projects" className="hover:text-white">Projects</a>
-                        <a href="/about" className="hover:text-white">About</a>
-                        <a href="/contact" className="hover:text-white">Contact</a>
-                    </div>
-                </div>
-            </nav>
-
             {/* Hero */}
             <section className="relative z-10 flex h-screen items-center justify-center px-6">
                 <div className="text-center">
