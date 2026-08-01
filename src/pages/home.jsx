@@ -25,8 +25,8 @@ export default function Home() {
                     <h1 className="text-[clamp(2.5rem,10vw,6rem)] font-black tracking-tight">Stuart Node</h1>
 
                     <p className="mx-auto mt-4 sm:mt-6 max-w-2xl text-[clamp(0.875rem,3vw,1.25rem)] text-zinc-400">
-                        Full Stack Developer & Minecraft Developer
-                        building plugins, websites, and backend systems.
+                        Bringing ideas to life through Minecraft plugins and mods, websites,
+                        and backend systems. Focused on creating unique experiences for all to enjoy.
                     </p>
 
                     <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
