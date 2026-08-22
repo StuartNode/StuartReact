@@ -57,10 +57,9 @@ export default function CountDown() {
 
     return (
         <div className="relative w-screen min-h-screen overflow-hidden bg-[#09090B] text-white">
-            {/* Background */}
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute inset-0 opacity-[0.14]" style={{backgroundImage: `linear-gradient(#d4d4d8 1px, transparent 1px),linear-gradient(90deg, #d4d4d8 1px, transparent 1px)`, backgroundSize: "48px 48px",}}/>
-                <div className="absolute inset-0" style={{background: "radial-gradient(circle at center, transparent 25%, #09090B 85%)",}}/>
+                <div className="absolute inset-0 opacity-70 [background-image:linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(135deg,transparent_0%,transparent_58%,rgba(96,165,250,0.12)_58%,rgba(96,165,250,0.12)_59%,transparent_59%,transparent_100%)] [background-size:54px_54px,54px_54px,100%_100%]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_25%,#09090B_85%)]" />
                 <div className="absolute left-1/2 top-1/3 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-500/20 blur-[160px]"/>
             </div>
 

@@ -95,19 +95,17 @@ export default function Projects() {
     return (
         <div className="min-h-screen overflow-hidden bg-[#09090B] text-white">
             <div className="pointer-events-none fixed inset-0">
-                <div className="absolute inset-0 opacity-[0.12]" style={{backgroundImage: `linear-gradient(#d4d4d8 1px, transparent 1px), linear-gradient(90deg, #d4d4d8 1px, transparent 1px)`, backgroundSize: "48px 48px",}}/>
-
-                <div className="absolute inset-0" style={{background: "radial-gradient(circle at center, transparent 20%, #09090B 85%)",}}/>
+                <div className="absolute inset-0 opacity-70 [background-image:linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(135deg,transparent_0%,transparent_58%,rgba(96,165,250,0.12)_58%,rgba(96,165,250,0.12)_59%,transparent_59%,transparent_100%)] [background-size:54px_54px,54px_54px,100%_100%]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,#09090B_85%)]" />
 
                 <div className="absolute left-1/2 top-0 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-blue-500/15 blur-[180px]" />
                 <div className="absolute right-0 top-1/2 h-[400px] w-[400px] rounded-full bg-purple-500/10 blur-[160px]" />
             </div>
 
-            <main className="relative z-10 mx-auto max-w-7xl px-6 py-24 sm:px-8">
+            <main className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pb-10 pt-16 sm:px-8">
                 <section className="mx-auto max-w-3xl text-center">
-                    <div className="mb-5 text-4xl font-black text-blue-400">&lt;/&gt;</div>
-
-                    <h1 className="text-5xl font-black tracking-tight sm:text-6xl">Projects</h1>
+                    <div className="text-4xl font-black text-blue-400 sm:text-5xl">&lt;/&gt;</div>
+                    <h1 className="mt-4 text-5xl font-black tracking-tight sm:text-6xl">Projects</h1>
 
                     <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
                         A collection of things I've built, experimented with,
@@ -115,7 +113,7 @@ export default function Projects() {
                     </p>
                 </section>
 
-                <section className="mt-16">
+                <section className="mt-12 sm:mt-14">
                     <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">{projects.map((project) => (<ProjectCard key={project.title} project={project}/>))}</div>
                 </section>
             </main>

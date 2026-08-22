@@ -1,38 +1,39 @@
-import { useEffect} from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function NotFound() {
     useEffect(() => {
-        document.title = "404 | StuartNode"
+        document.title = "404 | StuartNode";
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#09090B] text-white overflow-hidden">
-
-            {/* Background */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute inset-0 opacity-[0.14]" style={{backgroundImage: `linear-gradient(#d4d4d8 1px, transparent 1px),linear-gradient(90deg, #d4d4d8 1px, transparent 1px)`, backgroundSize: "48px 48px",}}/>
-                <div className="absolute inset-0" style={{background: "radial-gradient(circle at center, transparent 25%, #09090B 85%)",}}/>
-                <div className="absolute left-1/2 top-1/3 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-500/20 blur-[160px]"/>
+        <div className="relative min-h-screen overflow-hidden bg-[#09090B] text-white">
+            <div className="pointer-events-none absolute inset-0">
+                <div className="absolute inset-0 opacity-70 [background-image:linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(135deg,transparent_0%,transparent_58%,rgba(96,165,250,0.12)_58%,rgba(96,165,250,0.12)_59%,transparent_59%,transparent_100%)] [background-size:54px_54px,54px_54px,100%_100%]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_25%,#09090B_82%)]" />
+                <div className="absolute left-1/2 top-1/3 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-blue-500/20 blur-[180px]" />
             </div>
 
-            <section className="relative z-10 flex min-h-screen items-center justify-center px-6">
-                <div className="text-center">
-                    <div className="text-[clamp(2rem,8vw,5rem)] font-black text-blue-400">&lt;/&gt;</div>
-                    <h1 className="text-[clamp(2.5rem,10vw,6rem)] font-black tracking-tight">404</h1>
+            <section className="relative z-10 flex min-h-screen items-center justify-center px-6 py-20">
+                <div className="w-full max-w-xl text-center">
 
-                    <p className="mx-auto mt-4 sm:mt-6 max-w-2xl text-[clamp(0.875rem,3vw,1.25rem)] text-zinc-400">
-                        Oops! This page doesn't exist.
+                    <div className="text-[clamp(2.4rem,8vw,5.5rem)] font-black leading-none text-blue-400">&lt;/&gt;</div>
+                    <h1 className="mt-3 text-[clamp(3rem,10vw,7rem)] font-black tracking-[-0.08em] text-white">404</h1>
+
+                    <p className="mx-auto mt-4 max-w-lg text-base text-zinc-400 sm:text-lg">
+                        This page doesn’t exist or has wandered off.
                     </p>
 
-                    <div className="mt-6 sm:mt-10 flex justify-center gap-3 sm:gap-4">
-                        <Link to="/"
-                           className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base transition hover:border-blue-400">
+                    <div className="mt-8 flex justify-center">
+                        <Link
+                            to="/"
+                            className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-400/40 hover:bg-white/[0.05]"
+                        >
                             Back Home
                         </Link>
                     </div>
                 </div>
             </section>
         </div>
-    )
+    );
 }
