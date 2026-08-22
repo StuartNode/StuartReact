@@ -40,11 +40,11 @@ const projects = [
 ];
 
 const accentStyles = {
-    blue: {glow: "bg-blue-500/20", border: "hover:border-blue-400/40", text: "text-blue-400", gradient: "from-blue-500/10",},
-    purple: {glow: "bg-purple-500/20", border: "hover:border-purple-400/40", text: "text-purple-400", gradient: "from-purple-500/10",},
-    yellow: {glow: "bg-yellow-500/20", border: "hover:border-yellow-400/40", text: "text-yellow-400", gradient: "from-yellow-500/10",},
-    pink: {glow: "bg-pink-500/20", border: "hover:border-pink-400/40", text: "text-pink-400", gradient: "from-pink-500/10",},
-    red: {glow: "bg-red-500/20", border: "hover:border-red-400/40", text: "text-red-400", gradient: "from-red-500/10",},
+    blue: {glow: "bg-blue-500/15", border: "hover:border-blue-400/35", text: "text-blue-300", dot: "bg-blue-400", tint: "from-blue-500/8", tag: "border-blue-400/15 bg-blue-500/5 text-blue-100"},
+    purple: {glow: "bg-purple-500/15", border: "hover:border-purple-400/35", text: "text-purple-300", dot: "bg-purple-400", tint: "from-purple-500/8", tag: "border-purple-400/15 bg-purple-500/5 text-purple-100"},
+    yellow: {glow: "bg-yellow-500/15", border: "hover:border-yellow-400/35", text: "text-yellow-300", dot: "bg-yellow-400", tint: "from-yellow-500/8", tag: "border-yellow-400/15 bg-yellow-500/5 text-yellow-100"},
+    pink: {glow: "bg-pink-500/15", border: "hover:border-pink-400/35", text: "text-pink-300", dot: "bg-pink-400", tint: "from-pink-500/8", tag: "border-pink-400/15 bg-pink-500/5 text-pink-100"},
+    red: {glow: "bg-red-500/15", border: "hover:border-red-400/35", text: "text-red-300", dot: "bg-red-400", tint: "from-red-500/8", tag: "border-red-400/15 bg-red-500/5 text-red-100"},
 };
 
 function ProjectCard({ project }) {
@@ -53,31 +53,35 @@ function ProjectCard({ project }) {
     return (
         <a href={project.link} target="_blank" rel="noopener noreferrer"
             className={`
-                group relative overflow-hidden rounded-2xl
-                border border-white/10 bg-white/[0.035]
-                p-6 backdrop-blur-xl
-                transition-all duration-300
-                hover:-translate-y-1
+                group relative overflow-hidden rounded-[1.5rem]
+                border border-zinc-800/80 bg-[#0f1117]/95 p-6
+                shadow-[0_18px_40px_rgba(0,0,0,0.28)]
+                ring-1 ring-inset ring-white/5 transition-all duration-300
+                hover:-translate-y-1.5 hover:border-zinc-600/80
+                hover:shadow-[0_22px_44px_rgba(0,0,0,0.34)]
                 ${style.border}
             `}
         >
-            <div
-                className={`
-                    pointer-events-none absolute
-                    -right-20 -top-20 h-48 w-48
-                    rounded-full blur-[90px]
-                    opacity-0 transition-opacity duration-300
-                    group-hover:opacity-100
-                    ${style.glow}
-                `}
-            />
-
-            <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br${style.gradient}to-transparent opacity-60`}/>
+            <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${style.tint} to-transparent opacity-90`} />
+            <div className={`pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full blur-[80px] ${style.glow} opacity-0 transition-opacity duration-300 group-hover:opacity-100`} />
 
             <div className="relative z-10">
-                <h2 className="text-2xl font-bold tracking-tight">{project.title}</h2>
-                <p className="mt-2 min-h-[72px] text-sm leading-6 text-zinc-400">{project.description}</p>
-                <div className="flex flex-wrap gap-2">{project.tags.map((tag) => (<span key={tag} className="rounded-lg border border-white/10 bg-black/20 px-2.5 py-1 text-xs text-zinc-400">{tag}</span>))}</div>
+                <div className="mb-4 flex items-center justify-between gap-3">
+                    <span className={`inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.02] px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-zinc-300`}>
+                        <span className={`h-1.5 w-1.5 rounded-full ${style.dot}`} />
+                        {project.status ?? "Project"}
+                    </span>
+                </div>
+
+                <h2 className={`text-2xl font-semibold tracking-tight ${style.text}`}>{project.title}</h2>
+                <p className="mt-3 min-h-[76px] text-sm leading-6 text-zinc-400">{project.description}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                        <span key={tag} className={`rounded-full border px-2.5 py-1 text-[11px] font-medium tracking-wide ${style.tag}`}>
+                            {tag}
+                        </span>
+                    ))}
+                </div>
             </div>
         </a>
     );
