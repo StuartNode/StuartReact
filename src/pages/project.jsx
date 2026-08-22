@@ -95,7 +95,7 @@ export default function Projects() {
     return (
         <div className="min-h-screen overflow-hidden bg-[#09090B] text-white">
             <div className="pointer-events-none fixed inset-0">
-                <div className="absolute inset-0 opacity-70 [background-image:linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(135deg,transparent_0%,transparent_58%,rgba(96,165,250,0.12)_58%,rgba(96,165,250,0.12)_59%,transparent_59%,transparent_100%)] [background-size:54px_54px,54px_54px,100%_100%]" />
+                <div className="absolute inset-0 opacity-70 [background-image:linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:54px_54px]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,#09090B_85%)]" />
 
                 <div className="absolute left-1/2 top-0 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-blue-500/15 blur-[180px]" />
