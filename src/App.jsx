@@ -1,4 +1,4 @@
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
@@ -8,19 +8,19 @@ import NotFound from "./pages/notfound.jsx";
 import Project from "./pages/project.jsx";
 
 function App() {
-    return (
-        <>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/*" element={<NotFound />} />
-                <Route path="/Project" element={<Project />} />
-                <Route path="/countdown" element={<CountDown />} />
-            </Routes>
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/*" element={<NotFound />} />
+        <Route path="/Project" element={<Project />} />
+        <Route path="/countdown" element={<CountDown />} />
+      </Routes>
 
-            <Analytics />
-            <SpeedInsights />
-        </>
-    )
+      <Analytics />
+      <SpeedInsights />
+    </>
+  );
 }
 
-export default App
+export default App;
