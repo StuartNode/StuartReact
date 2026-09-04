@@ -2,10 +2,25 @@ import { useEffect } from "react";
 
 const projects = [
   {
+    title: "listless",
+    description:
+      "A simple place to keep track of bugs, ideas, and tasks.",
+    tags: ["JS", "SQLite", "Node.js"],
+    accent: "lime",
+    link: "https://listless.stuartnode.dev/",
+  },
+  {
+    title: "KeyRush",
+    description:
+      "A Typing-performance game built around speed, accuracy, and friendly competition.",
+    tags: ["JS", "SQLite", "Node.js"],
+    accent: "orange",
+    link: "https://keyrush.stuartnode.dev/",
+  },
+  {
     title: "GameMaker Assistant",
     description:
       "A fan-made AI assistant built to help with mGameMaker development.",
-    status: "Active",
     tags: ["AI", "GameMaker", "Node.js"],
     accent: "yellow",
     link: "https://maker.stuartnode.dev/",
@@ -33,14 +48,6 @@ const projects = [
     tags: ["Minecraft", "Fabric", "Java"],
     accent: "red",
     link: "/",
-  },
-  {
-    title: "stSurvivalGame",
-    description:
-      "A Paper plugin built to power Survival Games on the Shrimp Town server.",
-    tags: ["Minecraft", "PaperMc", "Java"],
-    accent: "purple",
-    link: "https://github.com/StuartNode/stSurvivalGame",
   },
 ];
 
@@ -85,6 +92,22 @@ const accentStyles = {
     tint: "from-red-500/8",
     tag: "border-red-400/15 bg-red-500/5 text-red-100",
   },
+  orange: {
+    glow: "bg-orange-500/15",
+    border: "hover:border-orange-400/35",
+    text: "text-orange-300",
+    dot: "bg-orange-400",
+    tint: "from-orange-500/8",
+    tag: "border-orange-400/15 bg-orange-500/5 text-orange-100",
+  },
+  lime: {
+    glow: "bg-lime-500/15",
+    border: "hover:border-lime-400/35",
+    text: "text-lime-300",
+    dot: "bg-lime-400",
+    tint: "from-lime-500/8",
+    tag: "border-lime-400/15 bg-lime-500/5 text-lime-100",
+  },
 };
 
 function ProjectCard({ project }) {
@@ -105,15 +128,6 @@ function ProjectCard({ project }) {
       />
 
       <div className="relative z-10">
-        <div className="mb-4 flex items-center justify-between gap-3">
-          <span
-            className={`inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.02] px-2.5 py-1 text-[10px] font-medium tracking-[0.18em] text-zinc-300 uppercase`}
-          >
-            <span className={`h-1.5 w-1.5 rounded-full ${style.dot}`} />
-            {project.status ?? "Project"}
-          </span>
-        </div>
-
         <h2 className={`text-2xl font-semibold tracking-tight ${style.text}`}>
           {project.title}
         </h2>
