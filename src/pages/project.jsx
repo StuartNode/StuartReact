@@ -18,14 +18,6 @@ const projects = [
     link: "https://keyrush.stuartnode.dev/",
   },
   {
-    title: "GameMaker Assistant",
-    description:
-      "A fan-made AI assistant built to help with mGameMaker development.",
-    tags: ["AI", "GameMaker", "Node.js"],
-    accent: "yellow",
-    link: "https://maker.stuartnode.dev/",
-  },
-  {
     title: "GraveStone",
     description:
       "A Paper plugin that lets players recover their inventory from persistent graves after death.",
